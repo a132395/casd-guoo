@@ -155,7 +155,7 @@ async function restore_undownloaded(){
 }
 
 async function updateDB(){
-    let respone = await gotInstance.get('forum.php?mod=forumdisplay&fid=36&typeid=368&filter=typeid&typeid=368&page=1');
+    let respone = await gotInstance.get('forum.php?mod=forumdisplay&fid=2&page=1');
     const html = respone.body;
     const $ = cheerio.load(html);
     // console.log($("tbody[id^='normalthread']").length);
@@ -168,8 +168,8 @@ async function updateDB(){
     //const forumPrefix = match[1];
     //const maxPageNumber = parseInt(match[2]);
     //console.log(forumPrefix,maxPageNumber);
-    const forumPrefix = 'forum.php?mod=forumdisplay&fid=36&typeid=368&filter=typeid&typeid=368&page='
-    const maxPageNumber = 165
+    const forumPrefix = 'forum.php?mod=forumdisplay&fid=2&page='
+    const maxPageNumber = 477
 
     console.log('Checking new posts...');
     const query_text = `INSERT INTO posts (url,title,postdate,downloaded)
@@ -178,7 +178,7 @@ async function updateDB(){
     ON CONFLICT 
     DO NOTHING;`;
 
-    for (let i = 1 ; i<= 1 ; i++){
+    for (let i = 2 ; i< 1 ; i++){
         //
         const promises = [];
         try{
