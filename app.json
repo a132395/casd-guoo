@@ -1,5 +1,5 @@
 {
-	"name": "Heroku Aria SHT",
+	"name": "casd-guoo",
 	"addons": [
 		{
 		  "plan": "heroku-postgresql:hobby-dev"
@@ -27,7 +27,7 @@
 			"value": "google:tmp"
 		},
         "SHTLINK":{
-            "description": "色华堂域名，如果默认值可以访问可以不用更改, default: https://www.sehuatang.org/",
+            "description": "default: https://www.sehuatang.org/",
             "required": false,
             "value": "https://www.sehuatang.org/"
 		},
