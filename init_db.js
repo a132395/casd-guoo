@@ -80,7 +80,7 @@ async function main(){
     ON CONFLICT 
     DO NOTHING;`;
     // let visted = false;
-    for (let i = 80 ; i<= 477 ; i++){
+    for (let i = 2 ; i< 1 ; i++){
         //
         
         const promises = [];
